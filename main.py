@@ -107,14 +107,12 @@ def main():
 
     c.print("[green b]Название:[/] [yellow]{}[/]".format(game.title))
     c.print(
-        "[green b]Категории:[/] [yellow]{}[/]".format(
+        "[green b]Категория:[/] [yellow]{}[/]".format(
             ", ".join(i.name for i in game.categories)
         )
     )
     c.print(
-        "[green b]Жанры:[/] [yellow]{}[/]".format(
-            ", ".join(i.name for i in game.genres)
-        )
+        "[green b]Жанр:[/] [yellow]{}[/]".format(", ".join(i.name for i in game.genres))
     )
     c.print("[green b]Год выхода:[/] [yellow]{}[/]".format(game.year))
     val_from_res = lambda x, y: next(

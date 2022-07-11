@@ -1,0 +1,19 @@
+name: Client Updater
+on:
+  schedule:
+    - cron: '0 12 * * *'
+  workflow_dispatch:
+jobs:
+  updater:
+    name: "Update client"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: "Install dependencies"
+        run: |
+          sudo apt update > /dev/null 2>&1
+          sudo apt install -y aria2 innoextract p7zip-full > /dev/null 2>&1
+      - name: "Run `pack_client.sh`"
+        run: |
+          ./pack_client.sh
