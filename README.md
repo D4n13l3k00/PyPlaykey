@@ -45,3 +45,7 @@ python3 -m pip install -r requirements.txt
 ```bash
 python3 main.py
 ```
+
+### 📜 Лицензия
+
+Данный код находится под лицензией [AGPLv3](/LICENSE)
