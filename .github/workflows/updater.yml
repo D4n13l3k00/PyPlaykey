@@ -1,7 +1,7 @@
 name: Client Updater
 on:
   schedule:
-    - cron: '0 12 * * *'
+    - cron: '0 0 * * MON,WED,FRI'
   workflow_dispatch:
 jobs:
   updater:
@@ -14,6 +14,15 @@ jobs:
         run: |
           sudo apt update > /dev/null 2>&1
           sudo apt install -y aria2 innoextract p7zip-full > /dev/null 2>&1
+      
       - name: "Run `pack_client.sh`"
-        run: |
-          ./pack_client.sh
+        run: ./pack_client.sh
+      
+      - name: Upload client to GitHub release
+        uses: marvinpinto/action-automatic-releases@latest
+        with:
+          repo_token: ${{ secrets.GHACTIONS_TOKEN }}
+          automatic_release_tag: latest
+          prerelease: false
+          title: "[CD] Client update"
+          files: client.7z

@@ -13,8 +13,6 @@ LIGHT="\033[2m"
 RESET="\033[0m"
 
 echo -e "${CYAN}${BOLD}PyPlaykey by @D4n13l3k00${RESET}"
-echo -e "${CYAN}${BOLD}Running ./dependencies.sh${RESET}"
-
 
 function is_installed() {
     if [ -z "$(command -v $1)" ]; then
@@ -24,11 +22,6 @@ function is_installed() {
         echo -e "${GREEN}${BOLD}[+] $1 is installed${RESET}"
     fi
 }
-
-echo -e "${BLUE}${BOLD}Checking dependencies...${RESET}"
-is_installed "aria2c"
-is_installed "innoextract"
-is_installed "7z"
 
 function delete_temp_dirs() {
     echo -e "${YELLOW}${BOLD}Removing temp dirs...${RESET}"
