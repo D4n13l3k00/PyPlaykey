@@ -14,4 +14,7 @@ rm -rf client
 
 echo -e "${BLUE}${BOLD}Extracting client...${RESET}"
 7z x -y client.7z  > /dev/null 2>&1
+rm -rf client.7z
+
+echo -e "${BLUE}${BOLD}Done!${RESET}"
 
