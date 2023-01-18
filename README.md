@@ -5,7 +5,7 @@
 ![Python version](https://img.shields.io/badge/python-v3.9.10-success)
 ![GitHub](https://img.shields.io/github/license/D4n13l3k00/PyPlaykey)
 ![CodeStyle](https://img.shields.io/badge/code%20style-black-black)
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/D4n13l3k00/PyPlaykey/Client%20Updater?label=auto%20update%20client)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/D4n13l3k00/PyPlaykey/updater.yml)
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/D4n13l3k00/PyPlaykey)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/D4n13l3k00/PyPlaykey)
