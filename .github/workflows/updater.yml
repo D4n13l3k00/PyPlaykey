@@ -1,8 +1,12 @@
 name: Client Updater
+
 on:
   schedule:
-    - cron: '0 0 * * MON,WED,FRI'
+    - cron: '0 0 * * MON'
   workflow_dispatch:
+
+permissions: write-all
+  
 jobs:
   updater:
     name: "Update client"
@@ -21,7 +25,7 @@ jobs:
       - name: Upload client to GitHub release
         uses: marvinpinto/action-automatic-releases@latest
         with:
-          repo_token: ${{ secrets.GHACTIONS_TOKEN }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
           automatic_release_tag: latest
           prerelease: false
           title: "[CD] Client update"
